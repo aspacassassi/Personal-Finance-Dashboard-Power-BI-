@@ -1,2 +1,7 @@
-# Personal-Finance-Dashboard-Power-BI-
-An interactive Power BI dashboard that visualises income and expenses
+# Summary
+This project allows users to transform manually logged transactions into meaningful visualisations in Power BI that elicit insights into personal saving and spending behaviour. Here, I present results from analysing my own logs during my student years, registered using simple Excel tables. Personal results indicate poor spending discipline, characterized by a high variability between months in both spending and saving. Additionally, budgets were more often than not exceeded, the saving goal was rarely met, and non-essential subcategories such as "Eating Out" and "Vacation/Travel" featured routinely in the most expensive subcategories per year. As a result, net cash flow decreased year after year, leading to low saving during the analysed period. The results highlight the importance of adhering to predetermined budgets, the need for increased prioritisation of spending, and the necessity for a consistent stream of income to allow accurate saving estimates. 
+
+# Problem Description
+Keeping track of income and spending is key to achieving financial goals. Although manually logging transactions with Excel can already provide an overview of cashflow, clear visualisations are what truly drive financial insights. This project was aimed at addressing this issue by complementing the ease of use offered by simple Excel tables with more extensive visualisations in Power BI
+
+
