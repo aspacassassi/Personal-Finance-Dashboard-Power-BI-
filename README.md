@@ -33,10 +33,10 @@ _Transforming the Data to Long Format_
 With the tables unpivoted, further data wrangling only required changing column names to more informative names and adding a type that differentiated logs as either expenses, income, or tranfers. Finally, all tables were then appended to a Full Table, which held the information from all categories in a single table
 
 ## Creating the Dashboard
-With a workable table complete, actual analysis could finally begin. To complete all of the analysis goals, I decided to create multiple tables where income and expenses could be analysed at differing levels of depth. This was achieved by designing a **Yearly Cash Flow & Savings** page , a **Budget** control page, a **Trends** page, and finally a **Spending Anatomy** page. More detail on each page can be found below. DAX code for all custom measures can be found in the file "DAX Measures".
+With a workable table complete, actual analysis could finally begin. To complete all of the analysis goals, I decided to create multiple pages where income and expenses could be analysed at differing levels of depth. This was achieved by designing a **Yearly Cash Flow & Savings** page , a **Budget** control page, a **Trends** page, and finally a **Spending Anatomy** page. More detail on each page can be found below. DAX code for all custom measures can be found in the file "DAX Measures".
 
 ### Yearly Cash Flow & Savings
-This page offers a quick glimpse into financial health, instead of a a deeper analysis into the destination of spent income. As such, it seemed appropriate to include cards highlighting **Total Yearly Income**, **Total Yearly Expense**, **Total Yearly Net**, as well as some large trend indicators such as **Year-over-Year Percent Change (YoY%)**, **Monthly Averages**, **Percentage Change in Comparison to the Previous Month**, and a line chart showing Income vs Expenses over the entire year. Finally, information on saving was visualised by a gauge meter measuring the **Saving Rate** and a pie chart. A slicer on the top left allows users to choose different years, which can be helpful in identifying trends across years.
+This page offers a quick glimpse into financial health, instead of a a deeper analysis into the destination of spent income. As such, it seemed appropriate to include cards highlighting **Total Yearly Income**, **Total Yearly Expense**, **Total Yearly Net**, as well as some trend indicators such as **Year-over-Year Percent Change (YoY%)**, **Monthly Averages**, **Percentage Change in Comparison to the Previous Month**, and a line chart showing Income vs Expenses over the entire year. Finally, information on saving was visualised by a gauge meter measuring the **Saving Rate** and a pie chart. A slicer on the top left allows users to choose different years, which can be helpful in identifying trends across years.
 
 _Year Cash Flow & Savings Page_
 ![First Dashboard Page](/Images/YearlyCashFlowAndSavings.png)
@@ -46,12 +46,12 @@ Next, I created a second page where **Essentials** and **Non-Essential** monthly
 
 _Budgets Page_
 ![Second Dashboard Page](/Images/Budgets.png)
-_215% spent ... Oops!_ :anguished:
+_215% spent ... Oops!_ :sweat_smile:
 
-Importantly, the values for each budget are calculated dynamically depending on the monthly income registered by the user. The default is set to 70% of income towards **Essentials**, 20% for **Savings**, and 10% for **Non-Essentials**, following a common rule of thumb regarding personal finance. Users can change these values at any time in the input sheets.
+Importantly, the values for each budget are calculated dynamically depending on the monthly income and percentages registered by the user. The default is set to 70% of income towards **Essentials**, 20% for **Savings**, and 10% for **Non-Essentials**, following a common rule of thumb regarding personal finance. Users can change these values at any time in the input sheets.
 
 ### Trends
-The trends page gives a higher level of analysis into spending behaviour by computing measures that span multiple months or the entire year. Nevertheless, it is still more specific than the **Yearly Cash Flow & Savings** page due to the distinction between **Essential** and **Non-Essential Spending**. Line charts detailing spending and the budget threshold provide visual information on the adherence to monthly budgets, while a **3-month rolling average** can provide a forecasting-like measure. Similarly, a line chart showing the **Saving Rate** per month shows how strictly the 20% saving rate rule was followed. These charts are supplemented by cards that show the adherence to budgets numerically, the decreasing or increasing trend of spending/saving as well as the subcategory with the most increase in spending. The latter informs what type of spending may have gotten out of control in the past 3 months, which again can guide a better prioritisation of cash allocation. 
+The trends page gives a higher level of analysis into spending behaviour by computing measures that span multiple months or the entire year. Nevertheless, it is still more specific than the **Yearly Cash Flow & Savings** page due to the distinction between **Essential** and **Non-Essential Spending**. Line charts detailing spending and the budget threshold provide visual information on the adherence to monthly budgets, while a **3-month rolling average** can provide a forecasting-like measure. Similarly, a line chart showing the **Saving Rate** per month shows how strictly the 20% saving rate rule was followed. These charts are supplemented by cards that show the adherence to budgets numerically, the decreasing or increasing trend of spending/saving as well as the subcategory with the most increase in spending. The latter informs what type of spending may have gotten out of hand in the past 3 months, which again can guide a better prioritisation of cash allocation. 
 
 _Trends Page_
 ![Third Dashboard Page](/Images/Trends.png)
@@ -65,7 +65,7 @@ _Spending Anatomy Page_
 
 Zooming out, a stacked column chart highlights the top 5 most expensive subcategories of the selected year, providing a granular view of where the most cash has been spent.
 
-## Limitations
+# Limitations
 Although the current project already provides analyses at varying levels of depth, it lacks the capability of producing forecasts. Such a function is likely easy to implement using R or Python by predicting future monthly income and expenditure based on previous years, and then uploading the forecast back to Power BI. However, this requires more extensive knowledge by the user, which is against the goal of creating an easy to use dashboard.
 Further, the current project does not track net worth since there is no way to track savings balance, assets value, or an investment portfolio. Although useful, these features are beyond the intended use of the dashboard.
 Importantly, the self-imposed deadline for this project has already been reached and so there are no plans (yet) to add any new features. Feel free to reach out if you have any feedback or ideas for the dashboard!
