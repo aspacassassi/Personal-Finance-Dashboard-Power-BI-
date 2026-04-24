@@ -5,7 +5,11 @@ This project allows users to transform manually logged income and expenditure in
 Excel, Power BI, DAX
 
 # Problem Description
-Keeping track of income and spending is key to achieving financial goals. Although manually logging transactions with Excel can already provide an overview of cashflow, clear visualisations are what truly drive financial insights. The current project addressed this issue by complementing the ease of use offered by simple Excel/Google Sheets tables with more extensive visualisations generated in Power BI.
+Keeping track of income and spending is key to achieving financial goals. Although manually logging transactions with Excel can already provide an overview of cashflow, clear visualisations are what truly drive financial insights. The current project addressed this issue by complementing the ease of use offered by simple Excel/Google Sheets tables with more extensive visualisations generated in Power BI.  
+In other words, this project aimed to answer the following questions:  
+_"Where is my money leaking?"_   
+_"Am I actually building wealth?"_  
+_"What trends should I worry about?"_
 
 # Goal
 - Uncover spending trends
@@ -33,7 +37,7 @@ _Transforming the Data to Long Format_
 With the tables unpivoted, further data wrangling only required changing column names to more informative names and adding a type that differentiated logs as either expenses, income, or tranfers. Finally, all tables were then appended to a Full Table, which held the information from all categories in a single table
 
 ## Creating the Dashboard
-With a workable table complete, actual analysis could finally begin. To complete all of the analysis goals, I decided to create multiple pages where income and expenses could be analysed at differing levels of depth. This was achieved by designing a **Yearly Cash Flow & Savings** page , a **Budget** control page, a **Trends** page, and finally a **Spending Anatomy** page. More detail on each page can be found below. DAX code for all custom measures can be found in the file "DAX Measures".
+With a workable table complete, actual analysis could finally begin. To complete all of the analysis goals, I decided to create multiple pages where income and expenses could be analysed at differing levels of depth. This was achieved by designing a **Yearly Cash Flow & Savings** page , a **Budget** control page, a **Trends** page, and finally a **Spending Anatomy** page. More detail on each page can be found below. DAX code for all custom measures can be found in the file "Dax Measures".
 
 ### Yearly Cash Flow & Savings
 This page offers a quick glimpse into financial health, instead of a a deeper analysis into the destination of spent income. As such, it seemed appropriate to include cards highlighting **Total Yearly Income**, **Total Yearly Expense**, **Total Yearly Net**, as well as some trend indicators such as **Year-over-Year Percent Change (YoY%)**, **Monthly Averages**, **Percentage Change in Comparison to the Previous Month**, and a line chart showing Income vs Expenses over the entire year. Finally, information on saving was visualised by a gauge meter measuring the **Saving Rate** and a pie chart. A slicer on the top left allows users to choose different years, which can be helpful in identifying trends across years.
@@ -65,6 +69,22 @@ _Spending Anatomy Page_
 
 Zooming out, a stacked column chart highlights the top 5 most expensive subcategories of the selected year, providing a granular view of where the most cash has been spent.
 
+# Data-Driven Recommendations
+### Frequent Overspending
+**Insight:** Spending frequently exceeds budgets   
+**Recommendation**: Weekly tracking of budgets and updating of inputs  
+**Rationale**:  Behavioral research shows budgeting decreases spending (Howard, 2021) and active monitoring improves self-control (Baumeister, 2002)  
+
+### Transportation Costs
+**Insight:** Carsharing rising despite motorcycle ownership  
+**Recommendation:** Re-evaluate necessity of carsharing trips  
+**Rationale:** Carsharing may be redundant when a cheaper alternative is present
+
+### Income Constraint
+**Insight:** Income is low and volatile
+**Recommendation** Increase income stability [hello there recruiters reading this ;)]
+**Rationale:** Savings rate and thus wealth acquisition is fundamentally income-driven
+
 # Limitations
 Although the current project already provides analyses at varying levels of depth, it lacks the capability of producing forecasts. Such a function is likely easy to implement using R or Python by predicting future monthly income and expenditure based on previous years, and then uploading the forecast back to Power BI. However, this requires more extensive knowledge by the user, which is against the goal of creating an easy to use dashboard.
 Further, the current project does not track net worth since there is no way to track savings balance, assets value, or an investment portfolio. Although useful, these features are beyond the intended use of the dashboard.
@@ -77,3 +97,8 @@ When you have registered your data, open  Personal Finance Dashboard.pbix that y
 
 _Where to Find Transform Data_
 ![Changing Source](/Images/TransformDataButton.png)
+
+
+# References
+Baumeister, R. F. (2002). Yielding to temptation: Self‐Control failure, impulsive purchasing, and consumer behavior. Journal of Consumer Research, 28(4), 670–676. https://doi.org/10.1086/338209  
+Howard, R. (2021). The influence of budgets on consumer spending. SSRN Electronic Journal. https://doi.org/10.2139/ssrn.3772052
