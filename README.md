@@ -19,6 +19,7 @@ This project required obtaining easy to use input sheets where spending and inco
 ## Input Sheets
 Excel input sheets were downloaded from https://www.vertex42.com/ExcelTemplates/personal-budget-spreadsheet.html and have been manually updated since 2022. Categories and subcategories were adapted to better fit actual spending behaviour.
 
+![An Empty Input Sheet](/Images/EmptyInputSheet.png)
 
 ## Data Wrangling
 Since the Excel tables were created to provide an easy method of logging spending, the data was initially in a wide format. Thus, the first step towards generating meaningful visualizations required data wrangling. Although this step could have been accomplished within Excel, I chose to complete it within Power BI so that future users would only have to upload their sheets into Power BI, which would in turn format the tables automatically.  
