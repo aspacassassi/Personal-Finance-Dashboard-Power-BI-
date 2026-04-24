@@ -81,8 +81,8 @@ Zooming out, a stacked column chart highlights the top 5 most expensive subcateg
 **Rationale:** Carsharing may be redundant when a cheaper alternative is present
 
 ### Income Constraint
-**Insight:** Income is low and volatile
-**Recommendation** Increase income stability [hello there recruiters reading this ;)]
+**Insight:** Income is low and volatile  
+**Recommendation** Increase income stability [hello there recruiters reading this ;)]  
 **Rationale:** Savings rate and thus wealth acquisition is fundamentally income-driven
 
 # Limitations
